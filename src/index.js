@@ -12,13 +12,20 @@ import "antd/dist/antd.css";
 import Challenge6 from "./pages/Challenge6";
 import Challenge7 from "./pages/Challenge7";
 import Authentication from "./pages/Authentication";
+import Home from "./pages/Home";
 
 export default function App() {
   return (
     <BrowserRouter>
       <HashRouter>
         <Switch>
-          <Route exact path="/6">
+          <Route exact path="/">
+            <Authentication />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/6">
             <Challenge6 />
           </Route>
           <Route path="/7">

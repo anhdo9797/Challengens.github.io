@@ -2,12 +2,67 @@
   display: flex;
   min-width: 100%;
   min-height: 100vh;
+  background-color: #cdd9fd;
   .wrapInputImage {
     width: 1158px;
     height: 648px;
     margin: auto auto;
-    .input{
-        padding: 74px 143px;
+    background-color: #ffff;
+    border-radius: 5px;
+    padding: 0;
+    .input {
+      // padding: 70px 0 70px 120px;
+      .buttonComplete {
+        width: 100%;
+        font-weight: bold;
+        font-size: 12px;
+        background-color: #012a93;
+        height: 40px;
+        color: #ffff;
+        border-radius: 5px;
+      }
+      .inputStyle {
+        font-size: 14px;
+        height: 40px;
+      }
+    }
+
+    .colImage {
+      padding: 0;
+      margin: 0;
+      padding: 0;
+      height: 648px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .authentication {
+    .wrapInputImage {
+      width: 90%;
+      height: 90%;
+      .input {
+        padding: 20px 20px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 600px) {
+  .authentication {
+    .wrapInputImage {
+      width: 1158px;
+      height: 648px;
+      .input {
+        padding: 40px 20px 0 120px;
+      }
     }
   }
 }

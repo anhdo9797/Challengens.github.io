@@ -1,0 +1,14 @@
+.home {
+  min-width: 100%;
+  min-height: 100vh;
+  .nav {
+    a {
+      font-size: 14px;
+      color: #ffff;
+      margin-right: 13px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
