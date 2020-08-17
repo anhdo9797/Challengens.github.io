@@ -17,7 +17,12 @@ export default function App() {
   return (
     <BrowserRouter>
       <HashRouter>
-        <Challenge7 />
+        <Route path="/" exact>
+          <Challenge6 />
+        </Route>
+        <Route path="/7" exact>
+          <Challenge7 />
+        </Route>
       </HashRouter>
     </BrowserRouter>
   );

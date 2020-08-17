@@ -62,18 +62,18 @@ const Challenge7 = () => {
       setItemNext(itemNext + 1);
     }
 
-    if (itemNext + 4 <= length) {
-      for (let index = itemNext + 1; index < itemNext + 4; index++) {
+    if (itemNext + 3 <= length) {
+      for (let index = itemNext; index < itemNext + 3; index++) {
         newArray.push(index);
       }
     } else {
-      for (let index = itemNext + 1; index < itemNext + 4; index++) {
+      for (let index = itemNext; index < itemNext + 3; index++) {
         if (index == length) {
           newArray.push(0);
         } else if (index < length) {
           newArray.push(index);
         } else {
-          newArray.push(index - 4);
+          newArray.push(index - 3);
         }
       }
     }
