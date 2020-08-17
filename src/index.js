@@ -18,7 +18,7 @@ export default function App() {
     <BrowserRouter>
       <HashRouter>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/6">
             <Challenge6 />
           </Route>
           <Route path="/7">
