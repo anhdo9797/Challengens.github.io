@@ -78,6 +78,8 @@ const Challenge7 = () => {
       }
     }
 
+    console.log(newArray);
+
     setListCard(newArray);
   };
 
@@ -123,7 +125,7 @@ const Challenge7 = () => {
                     }
                   >
                     <Card7
-                      src={listData[e].background}
+                      src={listData[e].igm}
                       label={listData[e].labelCard}
                       title={listData[e].titleCard}
                     />
