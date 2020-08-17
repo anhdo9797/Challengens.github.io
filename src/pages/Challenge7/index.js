@@ -16,8 +16,6 @@ import i2 from "./assets/i2.png";
 import i3 from "./assets/i3.png";
 import i4 from "./assets/i4.png";
 
-const listImage = [];
-
 const listData = [
   {
     background: bg1,
@@ -51,25 +49,25 @@ const listData = [
 
 const Challenge7 = () => {
   const [itemBg, setItemBg] = useState(0);
+  const [itemNext, setItemNext] = useState(0);
   const [listCard, setListCard] = useState([1, 2, 3]);
-  const [dotSelect, setDotSelect] = useState(0);
 
   const nextButton = () => {
     let newArray = [];
     let length = listData.length;
 
-    if (itemBg == length - 1) {
-      setItemBg(0);
+    if (itemNext == length - 1) {
+      setItemNext(0);
     } else {
-      setItemBg(itemBg + 1);
+      setItemNext(itemNext + 1);
     }
 
-    if (itemBg + 4 <= length) {
-      for (let index = itemBg + 1; index < itemBg + 4; index++) {
+    if (itemNext + 4 <= length) {
+      for (let index = itemNext + 1; index < itemNext + 4; index++) {
         newArray.push(index);
       }
     } else {
-      for (let index = itemBg + 1; index < itemBg + 4; index++) {
+      for (let index = itemNext + 1; index < itemNext + 4; index++) {
         if (index == length) {
           newArray.push(0);
         } else if (index < length) {
@@ -81,24 +79,10 @@ const Challenge7 = () => {
     }
 
     setListCard(newArray);
-    console.log(newArray);
-    console.log("setListCard", listCard);
-    console.log(itemBg);
   };
 
   const dotButton = (i) => {
     setItemBg(i);
-
-    let newArray = [];
-    for (let index = 0; index < listData.length; index++) {
-      if (index != itemBg) {
-        newArray.push(index);
-      }
-    }
-
-    setListCard(newArray);
-
-    console.log("dotButton", newArray);
   };
 
   return (

@@ -11,6 +11,7 @@ import "antd/dist/antd.css";
 
 import Challenge6 from "./pages/Challenge6";
 import Challenge7 from "./pages/Challenge7";
+import Authentication from "./pages/Authentication";
 
 export default function App() {
   return (
