@@ -1,0 +1,443 @@
+.challenge6 {
+  min-width: 100%;
+  min-height: 100vh;
+  font-family: "Roboto";
+  box-sizing: border-box;
+  img.background {
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+  }
+
+  .maskCover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.75;
+    background-color: black;
+  }
+
+  .outer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+
+  button {
+    outline: none;
+    border: none;
+    font-size: 16px;
+    height: 52px;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: 0.5s;
+  }
+
+  button:hover {
+    border: 2px solid #b9220a;
+  }
+  .item {
+    height: 100%;
+    position: relative;
+    width: 50%;
+    .outer {
+      justify-content: center;
+      .content {
+        width: 331px;
+        .labelF61 {
+          color: white;
+          font-size: 26px;
+          font-weight: bold;
+        }
+        .titleF61 {
+          color: white;
+          font-size: 14px;
+        }
+        button {
+          color: black;
+        }
+        .yellow {
+          background-color: #e4c70a;
+        }
+        .yellow:hover {
+          background-color: transparent;
+          color: white;
+        }
+        .white {
+          background-color: white;
+        }
+        .white:hover {
+          background-color: transparent;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .next {
+    position: absolute;
+    right: 1vw;
+    top: 50vh;
+    background-color: transparent;
+    z-index: 2;
+    opacity: 0.1;
+  }
+  .back {
+    position: absolute;
+    left: 1vw;
+    top: 0;
+    background-color: transparent;
+    z-index: 2;
+    top: 50vh;
+    opacity: 0.1;
+  }
+  .next:hover,
+  .back:hover {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .challenge6 {
+    button {
+      font-size: 4vw;
+    }
+    .outer {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 3vh;
+    }
+    .content {
+      width: 75%;
+      margin: 0 auto;
+
+      .labelX {
+        font-size: 22px;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+      }
+      .title {
+        font-size: 14px;
+        color: white;
+        margin: 17px 0 34px 0;
+        text-align: center;
+      }
+      .wrapButton {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        button {
+          width: 80%;
+          margin: 0;
+        }
+        button.buttonOutline {
+          background-color: transparent;
+          border: 2px solid white;
+          color: white;
+          margin-top: 30px;
+        }
+        button.buttonOutline:hover {
+          border: 2px solid #b9220a;
+        }
+      }
+    }
+    .item {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 400px;
+      }
+      .outer {
+        .content {
+          width: 75%;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .labelF61 {
+            text-align: center;
+          }
+          .titleF61 {
+            text-align: center;
+            width: 100%;
+          }
+          .yellow,
+          .white {
+            width: 80%;
+            margin: 30px auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  .challenge6 {
+    .content {
+      width: 100%;
+      padding: 1vh 4vw;
+      .labelX {
+        font-size: 39px;
+        color: white;
+        margin: 0;
+        font-weight: bold;
+      }
+      .title {
+        font-size: 19px;
+        color: white;
+        margin: 17px 0 34px 0;
+      }
+      .wrapButton {
+        display: flex;
+        width: 100%;
+        justify-content: start;
+        button.buttonOutline {
+          width: 188px;
+          background-color: transparent;
+          border: 2px solid white;
+          margin-left: 16px;
+          color: white;
+        }
+        button.buttonOutline:hover {
+          border: 2px solid #b9220a;
+        }
+      }
+    }
+    .wrapItem {
+      height: 400px;
+      width: 100%;
+      display: block;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .item {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        button {
+          color: black;
+          width: 188px;
+        }
+      }
+    }
+    .outer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 800px) {
+  .challenge6 {
+    .wrapItem {
+      height: 400px;
+      width: 100%;
+      display: flex;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .item {
+        width: 50%;
+        height: 100%;
+        position: relative;
+        button {
+          color: black;
+          width: 188px;
+        }
+      }
+    }
+    .outer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .content {
+        width: 600px;
+        padding: 1vh 4vw;
+        margin-left: 0;
+        .labelX {
+          font-size: 48px;
+          color: white;
+          margin: 0;
+          font-weight: bold;
+        }
+        .title {
+          font-size: 18px;
+          color: white;
+          margin: 17px 0 34px 0;
+        }
+        .wrapButton {
+          display: flex;
+          width: 100%;
+          justify-content: start;
+          button.buttonOutline {
+            width: 188px;
+            min-width: 0;
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 16px;
+            color: white;
+          }
+          button.buttonOutline:hover {
+            border: 2px solid #b9220a;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .challenge6 {
+    .wrapItem {
+      height: 400px;
+      width: 100%;
+      display: flex;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .item {
+        width: 50%;
+        height: 100%;
+        position: relative;
+        button {
+          color: black;
+          width: 188px;
+        }
+      }
+    }
+    .outer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .content {
+        width: 600px;
+        margin-left: 80px;
+        .labelX {
+          font-size: 48px;
+          color: white;
+          margin: 0;
+          font-weight: bold;
+        }
+        .title {
+          font-size: 18px;
+          color: white;
+          margin: 17px 0 34px 0;
+        }
+        .wrapButton {
+          display: flex;
+          width: 100%;
+          justify-content: start;
+          button.buttonOutline {
+            width: 188px;
+            min-width: 0;
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 16px;
+            color: white;
+          }
+          button.buttonOutline:hover {
+            border: 2px solid #b9220a;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .challenge6 {
+    .wrapItem {
+      height: 400px;
+      width: 100%;
+      display: flex;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .item {
+        width: 50%;
+        height: 100%;
+        position: relative;
+        .outer {
+          justify-content: center;
+          .content {
+            width: 331px;
+            .labelF61 {
+              color: white;
+              font-size: 26px;
+              font-weight: bold;
+            }
+            .titleF61 {
+              color: white;
+              font-size: 14px;
+            }
+
+            button {
+              color: black;
+              width: 188px;
+            }
+          }
+        }
+      }
+    }
+    .outer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .content {
+        width: 600px;
+        margin-left: 140px;
+        padding: 0;
+        .labelX {
+          font-size: 48px;
+          color: white;
+          margin: 0;
+          font-weight: bold;
+        }
+        .title {
+          font-size: 18px;
+          color: white;
+          margin: 17px 0 34px 0;
+        }
+        .wrapButton {
+          display: flex;
+          width: 100%;
+          justify-content: start;
+          button.buttonOutline {
+            width: 188px;
+            min-width: 0;
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 16px;
+            color: white;
+          }
+          button.buttonOutline:hover {
+            border: 2px solid #b9220a;
+          }
+        }
+      }
+    }
+  }
+}

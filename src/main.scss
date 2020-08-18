@@ -1,0 +1,19 @@
+.main {
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 320px) {
+  .main {
+    padding: 0 4vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    padding: 0 200px;
+  }
+}

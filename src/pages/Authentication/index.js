@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import lap from "./assets/lap.png";
 import visa from "./assets/visa.png";
 
-import MyForm from "./components/Form";
+import MyForm from "../../Components/Form";
 import "./styles.scss";
 
 const labelStyle = {
@@ -50,7 +50,7 @@ const Authentication = ({ props }) => {
         <Row style={{ padding: 0 }} justify="space-between">
           <Col className="input" xs={24} lg={11}>
             <h1>{select == "1" ? "Sign Up" : "Sign In"} </h1>
-
+            {/* sign up */}
             <Tabs defaultActiveKey="2" onChange={(key) => setSelect(key)}>
               <Tabs.TabPane tab="Sign Up" key="1">
                 <Form layout="vertical">

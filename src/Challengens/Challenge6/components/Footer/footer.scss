@@ -1,0 +1,143 @@
+.footer6 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .wrapTitleF6 {
+    display: block;
+    .labelF6 {
+      text-align: center;
+      font-weight: bold;
+      margin: 0;
+      color: white;
+    }
+    .titleF6 {
+      color: white;
+      margin: 0;
+      text-align: center;
+    }
+  }
+  .hiddenMobile {
+    display: block;
+    .labelF6 {
+      text-align: center;
+      font-weight: bold;
+      margin: 0;
+      color: white;
+    }
+    .titleF6 {
+      color: white;
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer6 {
+    padding: 1vh 0;
+    button {
+      background-color: transparent;
+      opacity: 0.1;
+    }
+    button:hover {
+      opacity: 1;
+      border: none;
+    }
+    .hiddenMobile {
+      display: none;
+    }
+    .wrapTitleF6 {
+      .labelF6 {
+        font-size: 14px;
+      }
+      .titleF6 {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 800px) {
+  .footer6 {
+    padding: 1vh 4vw;
+    .onlyDesktop {
+      display: none;
+    }
+    button {
+      background-color: transparent;
+      opacity: 0.1;
+    }
+    button:hover {
+      opacity: 1;
+      border: none;
+    }
+    .wrapTitleF6 {
+      .labelF6 {
+        font-size: 26px;
+      }
+      .titleF6 {
+        font-size: 16px;
+      }
+    }
+    .hiddenMobile {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer6 {
+    padding: 44px 80px;
+    .hiddenDesktop {
+      display: none;
+    }
+    button {
+      display: none;
+    }
+    .wrapTitleF6 {
+      .labelF6 {
+        font-size: 26px;
+      }
+      .titleF6 {
+        font-size: 16px;
+      }
+    }
+    .hiddenMobile {
+      .labelF6 {
+        font-size: 26px;
+      }
+      .titleF6 {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer6 {
+    padding: 0 140px 46px 140px;
+    .hiddenDesktop {
+      display: none;
+    }
+    button {
+      display: none;
+    }
+    .wrapTitleF6 {
+      .labelF6 {
+        font-size: 26px;
+      }
+      .titleF6 {
+        font-size: 16px;
+      }
+    }
+    .hiddenMobile {
+      .labelF6 {
+        font-size: 26px;
+      }
+      .titleF6 {
+        font-size: 16px;
+      }
+    }
+  }
+}

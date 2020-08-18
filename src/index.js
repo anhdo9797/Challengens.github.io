@@ -4,35 +4,33 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  HashRouter,
   BrowserRouter,
 } from "react-router-dom";
 import "antd/dist/antd.css";
 
-import Challenge6 from "./pages/Challenge6";
-import Challenge7 from "./pages/Challenge7";
 import Authentication from "./pages/Authentication";
 import Home from "./pages/Home";
+import Find from "./pages/Find";
+import Menu from "./pages/Menu";
+import Contact from "./pages/Contact";
+import { HeaderHome } from "./Components/Header";
+
+import "./main.scss";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <HashRouter>
+      <div className="main">
+        <HeaderHome />
         <Switch>
-          <Route exact path="/">
-            <Authentication />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/6">
-            <Challenge6 />
-          </Route>
-          <Route path="/7">
-            <Challenge7 />
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route path="/find" component={Find} />
+          <Route path="/menu" component={Menu} />
+          <Route path="/contact" component={Contact} />
+
+          <Route path="/user" component={Authentication} />
         </Switch>
-      </HashRouter>
+      </div>
     </BrowserRouter>
   );
 }
