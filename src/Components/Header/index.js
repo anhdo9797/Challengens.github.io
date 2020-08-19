@@ -55,7 +55,9 @@ export const HeaderHome = ({ match }) => {
         ))}
       </div>
       <div className="avatarShop">
-        <Avatar size="large" icon={<UserOutlined />} />
+        <button onClick={() => history.push("/user")}>
+          <Avatar size="large" icon={<UserOutlined />} />
+        </button>
         <button>
           {/* item shopping */}
           <Badge count={5}>
@@ -70,21 +72,21 @@ export const HeaderHome = ({ match }) => {
           <MenuFoldOutlined style={{ fontSize: 30, color: "grey" }} />
         </button>
       </div>
-      <Drawer
+      {/* <Drawer
         title="Basic Drawer"
         placement="right"
         closable={false}
         onClose={() => setVisible(false)}
         visible={visible}
         style={{ display: "flex", flexDirection: "column" }}
-        className='drawer'
+        className="drawer"
       >
         {listMenu.map((e, i) => (
           <button onClick={() => navCLick(e, i)} className={"itemDrawer"}>
             {e.label}
           </button>
         ))}
-      </Drawer>
+      </Drawer> */}
     </div>
   );
 };

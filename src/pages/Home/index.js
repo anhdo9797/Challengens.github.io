@@ -10,6 +10,7 @@ import ProductItem from "../../Components/Card/ProductItem";
 import line from "../../assets/line.png";
 import banner from "./assets/banner.png";
 import banner2 from "./assets/banner2.png";
+import { MyFooter } from "../../Components/Footer";
 
 const Home = ({ props }) => {
   return (
@@ -68,6 +69,8 @@ const Home = ({ props }) => {
       <h3 className="sloganType">
         Try our Most Delicious food and it usually take minutes to deliver!
       </h3>
+
+      {/* <MyFooter /> */}
     </div>
   );
 };

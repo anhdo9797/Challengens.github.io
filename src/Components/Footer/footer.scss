@@ -1,0 +1,24 @@
+.myFooter {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  .wrapInformation {
+    width: 30%;
+    .title {
+      font-size: 13px;
+    }
+  }
+  .link {
+    background-color: green;
+    width: 40%;
+  }
+  .instagram {
+    background-color: white;
+    width: 30%;
+    .label {
+      font-size: 18px;
+      color: #a80e0e;
+    }
+  }
+}
