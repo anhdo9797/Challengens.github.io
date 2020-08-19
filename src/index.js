@@ -18,8 +18,12 @@ import { HeaderHome } from "./Components/Header";
 import "./main.scss";
 
 export default function App() {
+  console.log("==========PUBLIC_ULR================");
+  console.log(process.env.ASSET_PATH);
+  console.log("====================================");
+
   return (
-    <BrowserRouter basename={process.env.PUBLIC_ULR}>
+    <BrowserRouter basename={process.env.ASSET_PATH}>
       {/* get ulr public + url router */}
       <div className="main">
         <HeaderHome />
