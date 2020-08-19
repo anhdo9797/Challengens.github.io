@@ -64,10 +64,10 @@ module.exports = {
     historyApiFallback: true,
   },
   devtool: "inline-cheap-source-map",
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: "./index.html",
-      filename: "./index.html",
-    }),
-  ],
+  // plugins: [
+  //   new HtmlWebPackPlugin({
+  //     template: "./index.html",
+  //     filename: "./index.html",
+  //   }),
+  // ],
 };
