@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
+const Dotenv = require("dotenv-webpack");
 
 const ASSET_PATH = process.env.ASSET_PATH || "/"; //get url public when deployment
 
@@ -80,5 +81,6 @@ module.exports = {
     new webpack.DefinePlugin({
       "process.env.ASSET_PATH": JSON.stringify(ASSET_PATH),
     }),
+    new Dotenv(),
   ],
 };
