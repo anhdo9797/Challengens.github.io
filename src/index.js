@@ -19,7 +19,8 @@ import "./main.scss";
 
 export default function App() {
   return (
-    <BrowserRouter basename={"/Challengens.github.io/dist"}>
+    <BrowserRouter basename={process.env.PUBLIC_ULR}>
+      {/* get ulr public + url router */}
       <div className="main">
         <HeaderHome />
         <Switch>
