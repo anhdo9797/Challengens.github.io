@@ -19,11 +19,16 @@ import "./main.scss";
 
 export default function App() {
   console.log("==========PUBLIC_ULR================");
-  console.log(process.env.ASSET_PATH);
+  console.log(process.env.REACT_APP_PUBLIC_URL);
   console.log("====================================");
 
   return (
-    <BrowserRouter basename={process.env.ASSET_PATH}>
+    <BrowserRouter
+      // basename={}
+      //open when build products
+      // basename={"Challengens.github.io/dist/"}
+      basename={process.env.REACT_APP_PUBLIC_URL}
+    >
       {/* get ulr public + url router */}
       <div className="main">
         <HeaderHome />

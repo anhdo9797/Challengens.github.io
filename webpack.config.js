@@ -1,7 +1,8 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
-const ASSET_PATH = process.env.ASSET_PATH || "/";
+
+const ASSET_PATH = process.env.ASSET_PATH || "/"; //get url public when deployment
 
 module.exports = {
   mode: "development",
