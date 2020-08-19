@@ -19,7 +19,7 @@ import "./main.scss";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="main">
         <HeaderHome />
         <Switch>
