@@ -1,0 +1,30 @@
+.searchCustom {
+  border: 1px solid #bfd8f8;
+  display: flex;
+  border-radius: 20px;
+  padding: 5px 15px;
+  background-color: #f4f9ff;
+  align-items: center;
+  width: 50vw;
+  max-width: 280px;
+
+  input {
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    background-color: #f4f9ff;
+  }
+  button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+}
+
+.searchCustom:focus {
+  border: 1px solid #a80e0e;
+}
+.searchCustom:hover {
+  border: 1px solid #a80e0e;
+}

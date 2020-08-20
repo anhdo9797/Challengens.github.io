@@ -4,8 +4,6 @@
   min-height: 100vh;
   background-color: #cdd9fd;
   .wrapInputImage {
-    width: 1158px;
-    height: 648px;
     margin: auto auto;
     background-color: #ffff;
     border-radius: 5px;
@@ -23,41 +21,20 @@
       border-radius: 5px;
     }
     .inputStyle {
-      font-size: 16px;
-      height: 45px;
-      border-radius: 10px;
-    }
-
-    .select {
-      height: 50px;
-      border: none;
-      box-sizing: border-box;
-    }
-
-    .colImage {
-      padding: 0;
-      margin: 0;
-      padding: 0;
-      height: 648px;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        margin: 0;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-      }
+      font-size: 14px;
+      height: 40px;
+      border-radius: 8px;
     }
   }
 }
 .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
-  height: 45px;
+  height: 40px;
 }
 @media screen and (min-width: 320px) {
   .authentication {
     .wrapInputImage {
       width: 90%;
-      height: 90%;
+      min-height: 90%;
       .input {
         padding: 20px 20px;
       }
@@ -68,8 +45,8 @@
   .authentication {
     .wrapInputImage {
       padding: 30px;
-      width: 500px;
-      height: 650px;
+      width: 400px;
+      min-height: 550px;
     }
   }
 }

@@ -55,6 +55,36 @@
     }
   }
 }
+
+.ant-drawer-body {
+  display: inline;
+  button.itemDrawer {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 16px;
+    margin-top: 14px;
+    padding: 7px;
+    outline: none;
+    font-weight: bold;
+  }
+  button.itemDrawer:hover,
+  button.active {
+    background-color: #fdb755;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 16px;
+    margin-top: 14px;
+    padding: 7px;
+    outline: none;
+    font-weight: bold;
+  }
+}
+
 @media screen and (min-width: 320px) {
   .header {
     .avatarShop {
@@ -65,13 +95,6 @@
     }
     .nav {
       display: none;
-    }
-    .drawer {
-      background-color: red;
-      .itemDrawer {
-        width: 90%;
-        background-color: red;
-      }
     }
   }
 }
@@ -86,6 +109,10 @@
     .menuPhone {
       display: none;
     }
+  }
+
+  .ant-drawer-body {
+    display: none;
   }
 }
 

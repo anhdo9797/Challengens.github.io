@@ -98,7 +98,7 @@ const Authentication = ({ props }) => {
                   <Select
                     defaultValue="VN"
                     style={{ width: "20%" }}
-                    listItemHeight={50}
+                    listItemHeight={40}
                   >
                     <Option value="VN">+84</Option>
                     <Option value="US">+44</Option>
@@ -122,19 +122,19 @@ const Authentication = ({ props }) => {
                     </Option>
                   </Select>
                   <Input
-                    style={{ width: "20%", height: "45px" }}
+                    style={{ width: "20%", height: "40px" }}
                     defaultValue="0000"
                   />
                   <Input
-                    style={{ width: "20%", height: "45px" }}
+                    style={{ width: "20%", height: "40px" }}
                     defaultValue="0000"
                   />
                   <Input
-                    style={{ width: "20%", height: "45px" }}
+                    style={{ width: "20%", height: "40px" }}
                     defaultValue="0000"
                   />
                   <Input
-                    style={{ width: "20%", height: "45px" }}
+                    style={{ width: "20%", height: "40px" }}
                     defaultValue="0000"
                   />
                 </Input.Group>
@@ -144,7 +144,6 @@ const Authentication = ({ props }) => {
             <Button className="buttonComplete">Sign Up</Button>
           </Tabs.TabPane>
 
-          {/* Sign In */}
           <Tabs.TabPane tab="Sign In" key="2">
             <Form
               name="basic"
@@ -197,8 +196,6 @@ const Authentication = ({ props }) => {
             </Button>
           </Tabs.TabPane>
         </Tabs>
-        {/* </Col> */}
-        {/* </Row> */}
       </div>
     </div>
   );

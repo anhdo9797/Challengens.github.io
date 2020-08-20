@@ -38,6 +38,7 @@ export const HeaderHome = ({ match }) => {
 
   const navCLick = (e, i) => {
     history.push(e.pathName);
+    setVisible(false);
     setSelect(i);
   };
 
@@ -72,8 +73,7 @@ export const HeaderHome = ({ match }) => {
           <MenuFoldOutlined style={{ fontSize: 30, color: "grey" }} />
         </button>
       </div>
-      {/* <Drawer
-        title="Basic Drawer"
+      <Drawer
         placement="right"
         closable={false}
         onClose={() => setVisible(false)}
@@ -82,11 +82,14 @@ export const HeaderHome = ({ match }) => {
         className="drawer"
       >
         {listMenu.map((e, i) => (
-          <button onClick={() => navCLick(e, i)} className={"itemDrawer"}>
+          <button
+            onClick={() => navCLick(e, i)}
+            className={select == i ? "active" : "itemDrawer"}
+          >
             {e.label}
           </button>
         ))}
-      </Drawer> */}
+      </Drawer>
     </div>
   );
 };

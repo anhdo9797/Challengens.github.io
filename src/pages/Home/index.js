@@ -1,16 +1,22 @@
 import React from "react";
+import Slider from "react-slick";
 
-import "./home.scss";
 import HotNews from "../../Components/Carousel/HotNews";
 import Category from "../../Components/Card/Category";
-
-import { listCategory, listProducts } from "./list";
+import { MyFooter } from "../../Components/Footer";
 import ProductItem from "../../Components/Card/ProductItem";
 
 import line from "../../assets/line.png";
 import banner from "./assets/banner.png";
 import banner2 from "./assets/banner2.png";
-import { MyFooter } from "../../Components/Footer";
+import review from "./assets/review.png";
+import quotes from "./assets/quotes.png";
+
+import "./home.scss";
+import { listCategory, listProducts } from "./list";
+import SwipeToSlide from "../../Components/Swipe";
+import { Row, Col, Carousel } from "antd";
+import { listImageDescription } from "./assets/description";
 
 const Home = ({ props }) => {
   return (
@@ -22,14 +28,7 @@ const Home = ({ props }) => {
       <h3 className="sloganType">
         Try our Most Delicious food and it usually take minutes to deliver!
       </h3>
-
-      <div
-      className='wrapMenuItem'
-        style={{
-         
-          // overflow: "hidden",
-        }}
-      >
+      <div className="wrapMenuItem">
         {listCategory.map((e, i) => (
           <Category title={e.title} src={e.src} key={i} />
         ))}
@@ -68,8 +67,30 @@ const Home = ({ props }) => {
       <h3 className="sloganType">
         Try our Most Delicious food and it usually take minutes to deliver!
       </h3>
+      <div className="testimonials">
+        <img src={review} className="imageTestimonials" />
+        <div className="quotes">
+          <img src={quotes} width="60" />
+          <h2>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </h2>
+          <div className="name">
+            <p>Nina Margaret</p>
+            <div className="line"></div>
+          </div>
+        </div>
+      </div>
 
-      {/* <MyFooter /> */}
+      <div className="description">
+        {listImageDescription.map((e, i) => (
+          <img src={e} width="250" style={{ transition: "0.5s" }} />
+        ))}
+      </div>
+
+      <MyFooter />
     </div>
   );
 };
