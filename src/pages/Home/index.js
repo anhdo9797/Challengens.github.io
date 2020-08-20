@@ -24,11 +24,10 @@ const Home = ({ props }) => {
       </h3>
 
       <div
+      className='wrapMenuItem'
         style={{
-          display: "flex",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          width: "100%",
+         
+          // overflow: "hidden",
         }}
       >
         {listCategory.map((e, i) => (

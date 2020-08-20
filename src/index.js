@@ -20,8 +20,8 @@ import "./main.scss";
 export default function App() {
   return (
     <BrowserRouter
-      // basename={process.env.REACT_APP_PUBLIC_URL}
-      basename={"/Challengens.github.io/dist"}
+      basename={process.env.REACT_APP_PUBLIC_URL}
+      // basename={"/Challengens.github.io/dist"}
     >
       {/* get ulr public + url router */}
       <div className="main">

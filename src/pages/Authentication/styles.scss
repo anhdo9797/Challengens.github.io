@@ -10,21 +10,28 @@
     background-color: #ffff;
     border-radius: 5px;
     padding: 0;
-    .input {
-      // padding: 70px 0 70px 120px;
-      .buttonComplete {
-        width: 100%;
-        font-weight: bold;
-        font-size: 12px;
-        background-color: #012a93;
-        height: 40px;
-        color: #ffff;
-        border-radius: 5px;
-      }
-      .inputStyle {
-        font-size: 14px;
-        height: 40px;
-      }
+
+    // padding: 70px 0 70px 120px;
+    .buttonComplete {
+      width: 100%;
+      font-weight: bold;
+      font-size: 12px;
+      background-color: #012a93;
+      height: 45px;
+      border-radius: 10px;
+      color: #ffff;
+      border-radius: 5px;
+    }
+    .inputStyle {
+      font-size: 16px;
+      height: 45px;
+      border-radius: 10px;
+    }
+
+    .select {
+      height: 50px;
+      border: none;
+      box-sizing: border-box;
     }
 
     .colImage {
@@ -43,7 +50,9 @@
     }
   }
 }
-
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  height: 45px;
+}
 @media screen and (min-width: 320px) {
   .authentication {
     .wrapInputImage {
@@ -58,11 +67,9 @@
 @media screen and (min-width: 600px) {
   .authentication {
     .wrapInputImage {
-      width: 1158px;
-      height: 648px;
-      .input {
-        padding: 40px 20px 0 120px;
-      }
+      padding: 30px;
+      width: 500px;
+      height: 650px;
     }
   }
 }
