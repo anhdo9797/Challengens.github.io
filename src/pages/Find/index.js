@@ -1,23 +1,41 @@
 import React, { useState } from "react";
-import { Input } from "antd";
 
 import "./find.scss";
 import { banner, listButtonCategory } from "../../assets/findPage/index";
 import Search from "../../Components/Input/Search";
 import { dataProductFindPage } from "../../assets/findPage/Products";
 import ItemProduct from "../../Components/Card/ItemProducts";
+import { useDispatch, useSelector } from "react-redux";
+import cartAction from "../../Store/AddToCart/action";
 
 const Find = ({ props }) => {
   const [categoryId, setCategoryId] = useState(0);
-  const [listProducts, setListProducts] = useState([]);
+  const [listProducts, setListProducts] = useState(dataProductFindPage);
+
+  let dispatch = useDispatch(); //function mapDispatch
+  let list = useSelector((state) => state.cart.listProducts);
+
+  const addToCart = (product) => {
+    dispatch(cartAction.addToCart(product));
+    console.log("====================================");
+    console.log(list);
+    console.log("====================================");
+  };
 
   const filterData = (category, i) => {
-    setCategoryId(i);
-    let newArray = dataProductFindPage.filter(
-      (e, i) => e.category === category
-    );
+    //fill listData for category (lunch, break fast, ....)
 
-    setListProducts(newArray);
+    setCategoryId(i); //id category select => change background
+
+    if (category != "") {
+      let newArray = dataProductFindPage.filter(
+        (e, i) => e.category === category
+      );
+
+      setListProducts(newArray);
+    } else {
+      setListProducts(dataProductFindPage);
+    }
   };
 
   return (
@@ -46,7 +64,13 @@ const Find = ({ props }) => {
       </div>
       <div className="listProducts">
         {listProducts.slice(0, 3).map((e, i) => (
-          <ItemProduct src={e.img} title={e.title} description={e.subTitle} />
+          <ItemProduct
+            src={e.img}
+            title={e.title}
+            price={e.price}
+            description={e.subTitle}
+            addToCart={() => addToCart(e)}
+          />
         ))}
       </div>
 
@@ -55,7 +79,13 @@ const Find = ({ props }) => {
       </div>
       <div className="listProducts">
         {dataProductFindPage.slice(4, 7).map((e, i) => (
-          <ItemProduct src={e.img} title={e.title} description={e.subTitle} />
+          <ItemProduct
+            src={e.img}
+            title={e.title}
+            description={e.subTitle}
+            price={e.price}
+            addToCart={() => addToCart(e)}
+          />
         ))}
       </div>
     </div>

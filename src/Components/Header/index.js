@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import logo from "../../assets/logo.png";
+import { useHistory, NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 import {
   MenuFoldOutlined,
   UserOutlined,
@@ -8,7 +9,7 @@ import {
 import { Avatar, Badge, Drawer } from "antd";
 
 import "./header.scss";
-import { useHistory } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 const listMenu = [
   {
@@ -36,6 +37,9 @@ export const HeaderHome = ({ match }) => {
 
   let history = useHistory();
 
+  //redux
+  let productsQuantity = useSelector((state) => state.cart.listProducts.length);
+
   const navCLick = (e, i) => {
     history.push(e.pathName);
     setVisible(false);
@@ -47,21 +51,34 @@ export const HeaderHome = ({ match }) => {
       <img src={logo} className="logo" />
       <div className="nav">
         {listMenu.map((e, i) => (
-          <button
-            onClick={() => navCLick(e, i)}
-            className={select == i ? "active" : null}
+          <NavLink
+            activeStyle={{
+              borderBottom: "3px solid #ff9300",
+              color: "#ff9300",
+            }}
+            to={e.pathName}
+            key={i}
+            className="navLink"
           >
             {e.label}
-          </button>
+          </NavLink>
         ))}
       </div>
       <div className="avatarShop">
-        <button onClick={() => history.push("/user")}>
+        <NavLink
+          activeStyle={{
+            borderBottom: "3px solid #ff9300",
+            color: "#ff9300",
+          }}
+          to="/user"
+          className="navLink"
+        >
           <Avatar size="large" icon={<UserOutlined />} />
-        </button>
+        </NavLink>
+
         <button>
           {/* item shopping */}
-          <Badge count={5}>
+          <Badge count={productsQuantity}>
             <ShoppingCartOutlined
               style={{ fontSize: 30, color: "grey", marginLeft: 30 }}
             />

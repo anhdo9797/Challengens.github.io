@@ -16,23 +16,29 @@ import Contact from "./pages/Contact";
 import { HeaderHome } from "./Components/Header";
 
 import "./main.scss";
+import { Provider } from "react-redux";
+import store from "./Store/store";
 
 export default function App() {
   return (
-    <BrowserRouter basename={"/Challengens.github.io/dist"}>
-      {/* get ulr public + url router */}
-      <div className="main">
-        <HeaderHome />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/find" component={Find} />
-          <Route path="/menu" component={Menu} />
-          <Route path="/contact" component={Contact} />
+    <Provider store={store}>
+      <BrowserRouter
+      basename={"/Challengens.github.io/dist"}
+      >
+        {/* get ulr public + url router */}
+        <div className="main">
+          <HeaderHome />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/find" component={Find} />
+            <Route path="/menu" component={Menu} />
+            <Route path="/contact" component={Contact} />
 
-          <Route path="/user" component={Authentication} />
-        </Switch>
-      </div>
-    </BrowserRouter>
+            <Route path="/user" component={Authentication} />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

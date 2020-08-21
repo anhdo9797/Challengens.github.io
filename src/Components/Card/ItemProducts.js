@@ -4,7 +4,7 @@ import { ShoppingCartOutlined } from "@ant-design/icons";
 
 import "./product.scss";
 
-const ItemProduct = ({ title, src, description }) => {
+const ItemProduct = ({ title, src, description, price, addToCart }) => {
   const { Meta } = Card;
   return (
     <Card
@@ -23,10 +23,10 @@ const ItemProduct = ({ title, src, description }) => {
     >
       <Meta title={title} description={description} />
       <div className="wrapPrice">
-        <button className="addCard">
+        <button className="addCard" onClick={addToCart}>
           <ShoppingCartOutlined /> Add to Card
         </button>
-        <p className="price">$10 </p>
+        <p className="price">${price} </p>
       </div>
     </Card>
   );

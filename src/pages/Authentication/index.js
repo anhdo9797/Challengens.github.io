@@ -39,10 +39,8 @@ const Authentication = ({ props }) => {
     password: "",
   });
 
-  let history = useHistory();
-  const goHome = () => {
-    history.push("/home");
-  };
+  const signUp = () => {};
+  const signIn = () => {};
 
   return (
     <div className="authentication">
@@ -141,7 +139,9 @@ const Authentication = ({ props }) => {
               </Form.Item>
             </Form>
 
-            <Button className="buttonComplete">Sign Up</Button>
+            <Button className="buttonComplete" onClick={signUp}>
+              Sign Up
+            </Button>
           </Tabs.TabPane>
 
           <Tabs.TabPane tab="Sign In" key="2">
@@ -191,9 +191,7 @@ const Authentication = ({ props }) => {
               />
             </Form>
 
-            <Button className="buttonComplete" onClick={goHome}>
-              Sign In
-            </Button>
+            <Button className="buttonComplete">Sign In</Button>
           </Tabs.TabPane>
         </Tabs>
       </div>
