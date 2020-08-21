@@ -18,14 +18,8 @@ import { HeaderHome } from "./Components/Header";
 import "./main.scss";
 
 export default function App() {
-  console.log('====================================');
-  console.log(process.env.REACT_APP_PUBLIC_URL);
-  console.log('====================================');
   return (
-    <BrowserRouter
-     
-      basename={"/Challengens.github.io/dist"}
-    >
+    <BrowserRouter basename={"/Challengens.github.io/dist"}>
       {/* get ulr public + url router */}
       <div className="main">
         <HeaderHome />
