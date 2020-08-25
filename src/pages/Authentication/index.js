@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { RightCircleOutlined, LeftCircleOutlined } from "@ant-design/icons";
-import { Row, Col, Input, Form, Tabs, Select, Button } from "antd";
+import { Row, Col, Input, Form, Tabs, Select, Button, Alert } from "antd";
 import { useHistory } from "react-router-dom";
-
-import lap from "./assets/lap.png";
-import visa from "./assets/visa.png";
+import ReactLoading from "react-loading";
 
 import MyForm from "../../Components/Form";
 import "./styles.scss";
+import { useDispatch, useSelector } from "react-redux";
+import actionAuth from "../../Store/Authentication/action";
 
 const labelStyle = {
   fontWeight: "300",
@@ -38,19 +38,37 @@ const Authentication = ({ props }) => {
     email: "",
     password: "",
   });
+  const [activeKey, setActiveKey] = useState();
+  // const [loading, setLoading] = useState(true);
 
-  const signUp = () => {};
-  const signIn = () => {};
+  //redux
+  let dispatch = useDispatch();
+  const loading = useSelector((state) => state.auth.loading);
+
+  const signUp = () => {
+    dispatch(actionAuth.signUp(inputSU));
+  };
+
+  const signIn = () => {
+    dispatch(actionAuth.signUp(inputSU));
+  };
 
   return (
     <div className="authentication">
       <div className="wrapInputImage">
-        {/* <Row style={{ padding: 0 }} justify="space-between"> */}
-        {/* <Col className="input" xs={24} lg={11}> */}
         <h1>{select == "1" ? "Sign Up" : "Sign In"} </h1>
-        {/* sign up */}
-        <Tabs defaultActiveKey="2" onChange={(key) => setSelect(key)}>
-          <Tabs.TabPane tab="Sign Up" key="1">
+
+        <Tabs
+          defaultActiveKey="2"
+          onChange={(key) => setSelect(key)}
+          activeKey={activeKey}
+        >
+          {/* sign up */}
+          <Tabs.TabPane
+            tab="Sign Up"
+            key="1"
+            style={{ justifyContent: "center" }}
+          >
             <Form layout="vertical">
               <MyForm
                 labelType="Email ID"
@@ -108,42 +126,19 @@ const Authentication = ({ props }) => {
                   />
                 </Input.Group>
               </Form.Item>
-
-              <Form.Item
-                label={<label style={labelStyle}>Credit Card Info</label>}
-                name="layout"
-              >
-                <Input.Group compact>
-                  <Select style={{ width: "20%" }} defaultValue="VS">
-                    <Option value="VS">
-                      <img src={visa} width="22" height="14" />
-                    </Option>
-                  </Select>
-                  <Input
-                    style={{ width: "20%", height: "40px" }}
-                    defaultValue="0000"
-                  />
-                  <Input
-                    style={{ width: "20%", height: "40px" }}
-                    defaultValue="0000"
-                  />
-                  <Input
-                    style={{ width: "20%", height: "40px" }}
-                    defaultValue="0000"
-                  />
-                  <Input
-                    style={{ width: "20%", height: "40px" }}
-                    defaultValue="0000"
-                  />
-                </Input.Group>
-              </Form.Item>
             </Form>
-
+            {loading ? (
+              <ReactLoading
+                type={"bubbles"}
+                color={"blue"}
+                height={20}
+                width={"20%"}
+              />
+            ) : null}
             <Button className="buttonComplete" onClick={signUp}>
               Sign Up
             </Button>
           </Tabs.TabPane>
-
           <Tabs.TabPane tab="Sign In" key="2">
             <Form
               name="basic"
@@ -191,7 +186,25 @@ const Authentication = ({ props }) => {
               />
             </Form>
 
-            <Button className="buttonComplete">Sign In</Button>
+            {loading ? (
+              <ReactLoading
+                type={"bubbles"}
+                color={"blue"}
+                height={20}
+                width={"20%"}
+              />
+            ) : null}
+            {loading ? (
+              <ReactLoading
+                type={"bubbles"}
+                color={"blue"}
+                height={20}
+                width={"20%"}
+              />
+            ) : null}
+            <Button className="buttonComplete" onClick={signIn}>
+              Sign In
+            </Button>
           </Tabs.TabPane>
         </Tabs>
       </div>

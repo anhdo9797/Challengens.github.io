@@ -35,7 +35,7 @@ const MyForm = ({ labelType, value, onChange, type, placeholder, error }) => {
           style={{ border: error ? "1px solid red" : null }}
         />
       )}
-      <p style={{ color: "red" }}>{error}</p>
+      <div style={{ height: 15, color: "red" }}>{error}</div>
     </Form.Item>
   );
 };

@@ -23,11 +23,11 @@ export default function App() {
   return (
     <Provider store={store}>
       <BrowserRouter
-      basename={"/Challengens.github.io/dist"}
+      // basename={"/Challengens.github.io/dist"}
       >
         {/* get ulr public + url router */}
         <div className="main">
-          <HeaderHome />
+          {/* <HeaderHome />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/find" component={Find} />
@@ -35,7 +35,9 @@ export default function App() {
             <Route path="/contact" component={Contact} />
 
             <Route path="/user" component={Authentication} />
-          </Switch>
+          </Switch> */}
+
+          <Authentication />
         </div>
       </BrowserRouter>
     </Provider>

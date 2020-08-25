@@ -47,7 +47,7 @@ export const HeaderHome = ({ match }) => {
   };
 
   return (
-    <div className="header">
+    <div className="header container">
       <img src={logo} className="logo" />
       <div className="nav">
         {listMenu.map((e, i) => (
